@@ -6,9 +6,6 @@ func solution(_ s:String) -> Bool
     var ans:Bool = false
     var stack: Int = 0
     
-    // [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
-    print("Hello Swift")
-    
     if s.prefix(1) == ")" {  // 시작이 닫힌 괄호면 false 출력
         return false
     } else { // 열린 괄호로 시작하면 for문 수행
