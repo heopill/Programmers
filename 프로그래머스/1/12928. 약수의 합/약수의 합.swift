@@ -1,15 +1,5 @@
 func solution(_ n:Int) -> Int {
-    if n == 0 {
-        return 0
-    }
-    
-    var divNumList = [Int]()
-    
-    for i in 1...n {
-        if n % i == 0 {
-            divNumList.append(i)
-        }
-    }
-    
+    if n == 0 { return 0 }
+    let divNumList = (1...n).filter { n % $0 == 0 }
     return divNumList.reduce(0, +)
 }
