@@ -2,18 +2,14 @@ import Foundation
 
 func solution(_ t:String, _ p:String) -> Int {
     var count = 0
-    var list = [String]()
     let tArr = Array(t)
     let lenT = tArr.count
     let lenP = p.count
+    let pNum = Int(p)!
     
     for i in 0...(lenT - lenP) {
         let sub = String(tArr[i..<(i + lenP)])
-        list.append(sub)
-    }
-    
-    for i in list {
-        if i <= p {
+        if let num = Int(sub), num <= pNum {
             count += 1
         }
     }
